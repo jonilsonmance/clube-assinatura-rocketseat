@@ -1,0 +1,129 @@
+footer{
+    
+    background: url(../assets/images/book-trace-background.png) ;
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o elemento */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-position: center; /* Centraliza a imagem no elemento */
+    
+
+    
+    padding: 6rem 2rem;
+   
+    
+
+    & .brand{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .75rem;
+
+        & .logo-footer{
+           width: 9.91rem ;
+           height: 2.5rem;
+            
+            
+        }
+
+        & .social{
+            border-top: 1px solid var(--shape-stroke); 
+            display: flex;
+            padding-top: .75rem;
+            justify-content: space-between;
+            gap: .88rem;
+
+            
+            & img{
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: .5rem;
+                border-radius: 50%;
+
+                &:hover{
+                    background-color: var(--shape-stroke);
+                    fill: white;
+                }
+            }
+
+            & svg {
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 0.5rem;
+                border-radius: 50%;
+                transition: background-color 0.3s ease-in-out, fill 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: var(--shape-stroke);
+            
+                    
+                    & path {
+                        fill: var(--text-body); 
+                    }
+                }
+            }
+        }
+    }
+
+    & .links{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+
+        & ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: .75rem;
+
+            list-style: none;
+
+            & li{
+                font: 500 .875rem/1 var(--ff-base);
+                color: var(--blue-light);
+                transition: color .3s ease-in-out;
+                padding-block: .25rem;
+
+                &:hover{
+                    color: var(--text-body);
+                }
+            }
+        }
+        & li:nth-child(1){
+            margin-bottom: .5rem;
+            font: 700 1rem/1 var(--ff-base);
+            color: var(--text-body);
+        }
+    }
+}
+
+@media (width >= 80em) {
+    footer{
+        display:flex ;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-block: 12rem;
+       
+        
+
+        & .brand{
+
+            .logo-footer{
+                width:20rem;
+                height: 4.16rem;
+            }
+            
+        }
+
+        & .links{
+            margin-top: 0;
+        }
+
+    
+        
+      
+       
+        
+        
+    }
+}

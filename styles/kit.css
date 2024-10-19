@@ -1,0 +1,327 @@
+#kit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    padding-block:5.5rem ;
+    
+    & .title-book{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+
+        & p{
+            font: 400 .875rem/140% var(--ff-base);
+            color: var(--text-body);
+        }
+
+        & .title-month{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .75rem;
+
+            & h2{
+                font: 700 1.5rem/1 var(--ff-base);
+                color: var(--text-body);
+            }
+
+            & img{
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+    }
+
+    & .kit-book{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 60%;
+            left: 40%;
+            filter: blur(250px);
+            background-color: var(--pink-low);
+
+        }
+
+        & .config-relative{
+            width: 18.62rem;
+            height: 18.62rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+            & img[src*="bookcastle"]{
+                width:9.82rem ;
+                height: 12.98rem;
+                z-index: 2;
+            }
+    
+            & img[src*="yellow"]{
+                width: 3.65rem;
+                height: 11.30rem;
+                z-index: 1;
+                position: absolute;
+                top: 3%;
+                right: 10%;
+                rotate: 12deg;  
+                
+            }
+    
+            & img[src*="purple"]{
+                width: 3.61rem;
+                height: 11.27rem;
+                z-index: 0;
+                position: absolute;
+                bottom: 25%;
+                right: -1%;
+                rotate: 22deg;  
+                
+            }
+    
+            & img[src*="pin"]{
+                width:4.68rem ;
+                height: 5.33rem;
+                z-index: 1;
+                position: absolute;
+                left: 8%;
+                bottom: 5%;
+                rotate: -7.55deg; 
+                
+                
+            }
+    
+            & img[src*="seta-1"]{
+                width:3.67rem ;
+                height: .62rem;
+                z-index: 1;
+                position: absolute;
+                left: 8%;
+                top: 14%;
+            }
+    
+            & img[src*="seta-2"]{
+                width:2.20rem ;
+                height: 2.67rem;
+                z-index: 1;
+                position: absolute;
+                left: 3%;
+                bottom: 28%;
+                
+            }
+    
+            & img[src*="seta-3"]{
+                width:3.06rem ;
+                height: 3.18rem;
+                z-index: 1;
+                position: absolute;
+                right: 5%;
+                bottom: 10%;
+            }
+    
+            & .p-top{
+                position: absolute;
+                top:8%;
+                left: -10%;
+                font: 400 .62rem/1 var(--ff-base);
+                color: var(--text-body);
+            }
+    
+            & .p-left{
+                position: absolute;
+                left: -5%;
+                top: 52%;
+                font: 400 .62rem/1 var(--ff-base);
+                color: var(--text-body);
+            }
+    
+            & .p-botton{
+                position: absolute;
+                right: 8%;
+                bottom: 5%;
+                font: 400 .62rem/1 var(--ff-base);
+                color: var(--text-body);
+                
+            }
+        }
+    }
+
+}
+
+
+
+
+@media (width >= 80em) {
+    #kit {
+
+        & .title-book{
+            & p{
+                font: 400 1rem/140% var(--ff-base);
+            }
+
+            & .title-month{
+                & h2{
+                    font: 700 2rem/1 var(--ff-base);
+                }
+    
+                & img{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+
+        & .kit-book{
+
+            & .config-relative{
+                width: 58.12rem;
+                height: 58.12rem;
+    
+                & img[src*="bookcastle"]{
+                    width:29.18rem ;
+                    height: 38.56rem;
+                    
+                    
+                }
+    
+                & img[src*="yellow"]{
+                    position: absolute;
+                    width: 10.75rem;
+                    height: 33.5rem;
+                    top: 20%;
+                    right: 40%;
+                    rotate: 0deg;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+    
+                & img[src*="purple"]{
+                    position: absolute;
+                    width: 10.75rem;
+                    height: 33.5rem;  
+                    top: 20%;
+                    right: 40%;
+                    rotate: 0deg;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+    
+                & img[src*="pin"]{
+                    position: absolute;
+                    width:13.87rem ;
+                    height: 15.87rem;
+                    bottom: 20%;
+                    left: 40%;
+                    rotate: 0deg;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+    
+                & img[src*="seta-1"]{
+                    position: absolute;
+                    width: 10.90rem ;
+                    height: 1.87rem;
+                    top: 40%;
+                    left: 40%;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+    
+                & img[src*="seta-2"]{
+                    position: absolute;
+                    width:6.55rem ;
+                    height: 7.93rem;
+                    top: 40%;
+                    left: 40%;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+    
+                & img[src*="seta-3"]{
+                    position: absolute;
+                    width:9.09rem ;
+                    height: 9.46rem;
+                    top: 40%;
+                    left: 40%;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+
+                & .p-top{
+                    font: 400 1rem/140% var(--ff-base);
+                    color: var(--text-title);
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+
+                & .p-left{
+                    font: 400 1rem/140% var(--ff-base);
+                    color: var(--text-title);
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+
+                & .p-botton{
+                    font: 400 1rem/140% var(--ff-base);
+                    color: var(--text-title);
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    transition: transform 0.5s ease, top 0.5s ease, rotate 0.5s ease;
+                }
+
+            }
+
+        }
+        
+        & .kit-book:hover  img[src*="yellow"] {
+            transform: translate(14.2rem, -9.5rem);
+            rotate: 12deg;     
+            }
+            
+        & .kit-book:hover  img[src*="purple"] {
+            transform: translate(20.5rem, -8rem);
+            rotate: 22deg;     
+        }
+
+        & .kit-book:hover  img[src*="pin"] {
+            transform: translate(-18rem, 4.5rem);
+            rotate: -8deg;     
+        }
+        & .kit-book:hover  img[src*="seta-1"] {
+            transform: translate(-17rem, -14.5rem);
+               
+        }
+
+        & .kit-book:hover  img[src*="seta-2"] {
+            transform: translate(-20rem, 10rem);
+               
+        }
+        & .kit-book:hover  img[src*="seta-3"] {
+            transform: translate(20rem, 20rem);
+               
+        }
+
+        & .kit-book:hover  .p-top{
+            transform: translate(-22rem, -17rem);
+                
+        }
+
+        & .kit-book:hover  .p-left{
+            transform: translate(-21rem, 7.5rem);
+                
+        }
+
+        & .kit-book:hover  .p-botton{
+            transform: translate(15rem, 30rem);
+                
+        }
+    }
+}

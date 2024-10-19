@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+}
+
+.flex{
+    display: flex;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+@media (min-width:80em) {
+    .desktop-only {
+        display: inline-block;
+    }
+}

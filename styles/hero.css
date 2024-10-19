@@ -1,0 +1,132 @@
+#hero {
+    background-image: url(../assets/images/hero-background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 1.25rem 1.25rem 17rem;
+    position: relative;
+    animation: bg 1.5s ease-out both;
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 25%;
+        height: 60%;
+        left: 0;
+        bottom: -3rem;
+        filter: blur(250px);
+        background-color: var(--pink-low);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 25%;
+        height: 80%;
+        right: 0;
+        bottom: -12rem;
+        filter: blur(250px);
+        background-color: var(--pink-low);
+    }
+    
+    
+    & nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .75rem 1rem;
+            gap: .5rem;
+            background: var(--pink-dark);
+            border-radius: .5rem;
+            font: bold .875rem/1 var(--ff-base);
+            color: var(--text-title);
+
+            &:hover{
+                background-color: var(--pink-base);
+            }
+        }
+
+        
+    }
+
+    & header{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 1rem;
+
+        & h1{
+            color: var(--text-title);
+            font: bold 1.75rem/100% var(--ff-base);
+        }
+
+        & p{
+            font: 400 .875rem/140% var(--ff-base);
+            color: var(--text-body);
+        }
+    }
+    
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bg {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (width >= 80em) {
+    #hero {
+        padding: 3.5rem 10rem 23rem 10rem;
+
+        & nav{
+            & img + img {
+                display: none;
+            }
+
+        }
+
+        & header{
+            
+            gap: 2rem;
+            margin-top: 10.25rem;
+            & h1 + h1, p + p {
+                display: none;
+            }
+
+            & h1{
+                
+                font: bold 3rem/100% var(--ff-base);
+            }
+
+            & p{
+                font: 400 1.25rem/140% var(--ff-base);
+
+            }
+        }
+        
+    }
+}
+
+
+
